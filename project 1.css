@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color:  #f9f9f9;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #ff7657;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+
+.navbar {
+    background: none;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff7657;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #ff7657;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #ff7657;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+    color: #333;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .hamburger i::before {
+    content: "\f00d";
+}
+
+#menu-toggle:checked ~ .nav-menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu-toggle:checked  .nav-menu li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
+
+
+.hero {
+    height: 100vh;
+    background: url('https://c4.wallpaperflare.com/wallpaper/704/982/390/anime-girls-anime-hd-wallpaper-preview.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    margin-top: 60px; 
+    animation: fadeIn 2s ease-in-out;
+    padding-left: 5%;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+} 
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+
+}
+
+.hero .btn {
+    padding: 8px 24px;
+    background-color: #ff7657;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #c0c0c0;
+}
+
+
+.gallery {
+    padding: 80px 0;
+}
+
+.gallery h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #ff7657;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.gallery p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+.gallery {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery i {
+    font-size: 3em;
+    color: #ff7657;
+    margin-bottom: 20px;
+}
+
+.gallery h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.gallery p {
+    font-size: 1.1em;
+}
+.container1{
+    display: flex;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.products-item {
+    text-align: right;
+    margin-top: auto;
+}
+
+.products-item img {
+    width: 50%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    height: 300px;
+}
+
+.products-item h3 {
+    font-size: 1.8em;
+
+}
+
+.text {
+    text-align: right;
+}
+
+.blog-post {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.blog-post img {
+    width: 50%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: grid;
+}
+
+.blog-post h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+#contact {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+}
+
+#contact h2 {
+    color: #ff7657;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+    display: inline-block;
+}
+
+#contact h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #ff7657;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    background-color: #ff7657;
+    color: #333;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c0c0c0;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #ff7657;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
