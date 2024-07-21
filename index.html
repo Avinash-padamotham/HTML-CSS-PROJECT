@@ -11,13 +11,13 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a href="#" class="logo">Animado</a>
+                <a href="#" class="logo">Animado<span class="highlight1">.</span></a>
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="hamburger">
                     <i class="fas fa-bars"></i>
                 </label>
                 <ul class="nav-menu">
-                    <li><a href="#home">Homes</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#products">Products</a></li>
@@ -28,7 +28,7 @@
         </nav>
         <div class="hero" id="home">
             <div class="hero-content">
-                <h1>Welcome to Animado</h1>
+                <h1>Welcome to <span class="highlight1">Animado</span></h1>
                 <p>Your favorite place for cartoons and anime series.</p>
                 <a href="#about" class="btn">Learn More</a>
             </div>
@@ -46,54 +46,61 @@
         <div class="container">
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="https://wallpapers.com/images/featured/anime-characters-pictures-f746oqd5lwyzfati.jpg" alt="Project 1">
+                <img src="https://preview.redd.it/ewcozcahkwk61.png?width=1080&crop=smart&auto=webp&s=56ed427b91cc72218349fc6b9b349cbf4555dc92" alt="Project 1">
                 
-                <p>Professional web development services.</p>
+                <p><span class="highlight2">#1</span> Animation Studio Presents.</p>
             </div>
         </div>
     </section>
 
     <section id="products">
-        <div class="p">
-        <h2>Products</h2>
-    </div>
-        <div class="container1">
+
+        <div class="container">
+            <h2>Products</h2>
 
             <div class="products-item">
-                <img src="https://images.alphacoders.com/647/thumb-1920-647552.jpg" alt="Project 1">
-            </div>
-            <div class="text"><h3>Dragon Ball Z</h3>
+                <h3>Dragon Ball Z</h3>
+                <img src="https://images.alphacoders.com/647/thumb-1920-647552.jpg" alt="Product 1">
             </div>
             
             <div class="products-item">
-                <img src="https://wallpapers-clan.com/wp-content/uploads/2024/04/one-punch-man-saitama-epic-desktop-wallpaper-preview.jpg" alt="Project 2">
-            </div>
-            <div class="text">
                 <h3>One Punch Man</h3>
-            </div>
+                <img src="https://wallpapers-clan.com/wp-content/uploads/2024/04/one-punch-man-saitama-epic-desktop-wallpaper-preview.jpg" alt="Product 2">
+                </div>
+
             <div class="products-item">
+                <h3>Demon Slayer</h3>
                 <img src="https://4kwallpapers.com/images/wallpapers/demon-slayer-2880x1800-10716.jpg" alt="Project 3">
             </div>
-            <div class="text">  
-                <h3>Demon Slayer</h3>
-            </div>
+
         </div>
     </section>
 
     <section id="blog">
+
         <div class="container">
             <h2>Latest Blog Posts</h2>
+
             <div class="blog-post">
                 <img src="https://static.toiimg.com/thumb/89038908.cms?width=680&height=512&imgsize=36278" alt="Blog Post 1">
+             
+                <div class="blog-post-content">    
                 <h3>Dev Company</h3>
-                <p>Short description of the blog post goes here...</p>
+                <p>Dev Mode is a setting for developers that enables debugging, real-time testing, and additional tools to aid in development without impacting the production environment.</p>
                 <a href="#" class="btn">Read More</a>
+                </div>
+
             </div>
+
             <div class="blog-post">
                 <img src="https://www.melbourne-criminal-lawyer.com.au/wp-content/uploads/2019/11/Social-photo-street1-300x300.jpg" alt="Blog Post 2">
-                <h3>studio tour</h3>
-                <p>Short description of the blog post goes here...</p>
+                
+                <div class="blog-post-content">
+                <h3>Studio tour</h3>
+                <p>Studio is a creative workspace or software providing tools for coding, designing, and testing, tailored for efficient and collaborative development or design work.</p>
                 <a href="#" class="btn">Read More</a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -110,10 +117,35 @@
         </div>
     </section>
 
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+    
+        let topBtn = document.getElementById("topBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Animado. All rights reserved.</p>
         </div>
     </footer>
+    
 </body>
 </html>
